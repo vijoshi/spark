@@ -148,8 +148,8 @@ sparkR.sparkContext <- function(
     sparkRjsc <- NA
     if (exists(".sparkRjsc", envir = .sparkREnv)) {
       sparkRjsc <- get(".sparkRjsc", envir = .sparkREnv)
+      return(sparkRjsc)
     }
-    return(sparkRjsc)
   },
   error = function(err) {
     # ignore error
